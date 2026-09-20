@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atanu Das — Software Engineer · AI/ML · Vienna</title>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+><title>Atanu Das — Software Engineer · AI/ML · Vienna</title>
 <meta name="description" content="Atanu Das is a software engineer and Computational Science Master's student at the University of Vienna, with experience in React, Next.js, and machine learning research. Open to AI/ML internships, working student positions, and software engineering roles.">
 <meta name="theme-color" content="#070B09">
 <meta property="og:title" content="Atanu Das — Software Engineer · AI/ML · Vienna">
@@ -320,26 +322,173 @@ html.has-cursor #cur, html.has-cursor #curDot{display:block}
 .rv.d1{transition-delay:.07s}.rv.d2{transition-delay:.14s}.rv.d3{transition-delay:.21s}
 
 /* ---------- responsive ---------- */
-@media (max-width:900px){
-  .about-grid{grid-template-columns:1fr;gap:44px}
-  .proj-grid{grid-template-columns:1fr}
-  .repo-grid{grid-template-columns:1fr 1fr}
-  .gh-stats{grid-template-columns:1fr 1fr}
+/* Tablet */
+@media (max-width: 900px) {
+  .wrap {
+    width: min(100% - 40px, 1200px);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .proj-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .repo-grid,
+  .gh-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sec-title {
+    font-size: clamp(2.4rem, 7vw, 4rem);
+  }
 }
-@media (max-width:640px){
-  .sec{padding:84px 0}
-  .hero{padding:150px 0 90px}
-  .skill-grid,.repo-grid{grid-template-columns:1fr}
-  .nav-links a{padding:8px 9px;font-size:13px}
-  .status{display:none}
-  body{font-size:15px}
+
+/* Mobile and iPhone */
+@media (max-width: 640px) {
+  .wrap {
+    width: 100%;
+    padding-right: max(20px, env(safe-area-inset-right));
+    padding-left: max(20px, env(safe-area-inset-left));
+  }
+
+  body {
+    overflow-x: hidden;
+    font-size: 15px;
+  }
+
+  .sec {
+    padding: 72px 0;
+  }
+
+  .hero {
+    min-height: auto;
+    padding:
+      calc(110px + env(safe-area-inset-top))
+      0
+      72px;
+  }
+
+  .hero h1,
+  .name {
+    font-size: clamp(3rem, 15vw, 5.5rem);
+    line-height: 0.95;
+  }
+
+  .sec-title {
+    font-size: clamp(2.1rem, 10vw, 3.2rem);
+    line-height: 1.05;
+  }
+
+  .sec-sub {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .about-grid,
+  .skill-grid,
+  .proj-grid,
+  .repo-grid,
+  .gh-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    gap: 32px;
+  }
+
+  .proj,
+  .repo,
+  .skill-card {
+    min-width: 0;
+    padding: 24px;
+  }
+
+  .proj h3 {
+    font-size: 1.35rem;
+  }
+
+  .proj p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .proj-tech {
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .status {
+    display: none;
+  }
 }
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important}
-  .rv,.name.pre .ch{opacity:1;transform:none}
-  #intro{display:none}
-  .cal-grid i{opacity:1;transform:none}
+
+/* Small iPhones */
+@media (max-width: 390px) {
+  .wrap {
+    padding-right: max(16px, env(safe-area-inset-right));
+    padding-left: max(16px, env(safe-area-inset-left));
+  }
+
+  .sec {
+    padding: 64px 0;
+  }
+
+  .hero {
+    padding-top: calc(96px + env(safe-area-inset-top));
+  }
+
+  .proj,
+  .repo,
+  .skill-card {
+    padding: 20px;
+  }
+
+  .sec-title {
+    font-size: 2rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+  }
+
+  .rv,
+  .name.pre .ch {
+    opacity: 1;
+    transform: none;
+  }
+
+  #intro {
+    display: none;
+  }
+
+  .cal-grid i {
+    opacity: 1;
+    transform: none;
+  }
 }
 </style>
 </head>
@@ -368,7 +517,7 @@ html.has-cursor #cur, html.has-cursor #curDot{display:block}
 
     <nav class="nav-links" aria-label="Sections">
       <a href="#about" data-nav="about">About</a>
-      <a href="#experience" data-nav="experience">Work Experience</a>
+      <a href="#experience" data-nav="experience">Work</a>
       <a href="#skills" data-nav="skills">Skills</a>
       <a href="#projects" data-nav="projects">Projects</a>
       <!-- <a href="https://github.com/AtanuCodes" target="_blank" rel="noopener noreferrer">GitHub ↗</a> -->
