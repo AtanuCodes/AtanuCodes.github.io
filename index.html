@@ -801,46 +801,142 @@ html.has-cursor #cur, html.has-cursor #curDot{display:block}
 <section class="sec" id="projects">
   <div class="wrap">
     <div class="eyebrow rv">Projects</div>
-    <h2 class="sec-title rv" data-scramble>Built from scratch, shipped for real<span class="dot">.</span></h2>
-    <p class="sec-sub rv d1">Retrieval, vision, and language — three systems where I owned the whole pipeline, from ingestion to evaluation.</p>
+
+    <h2 class="sec-title rv" data-scramble>
+      Built from scratch, shipped for real<span class="dot">.</span>
+    </h2>
+
+    <p class="sec-sub rv d1">
+      Machine learning, computer vision, language, and AI agents — practical systems covering data preparation, model development, evaluation, and deployment.
+    </p>
+
     <div class="proj-grid">
-      
+
+      <!-- Fake News Detection -->
       <article class="proj rv d1" data-tilt data-glow>
-        <div class="proj-top"><span class="yr">2026</span><span class="st"><i></i>SHIPPED</span></div>
-        <h3>Chest Disease Detection</h3>
-        <p>Deep-learning classifier for chest X-rays using <b>DenseNet121 transfer learning</b> on the NIH dataset. Data augmentation to fight class imbalance, plus <b>Grad-CAM activation maps</b> so a clinician can see exactly where the model is looking — interpretability first.</p>
-        <div class="proj-tech">TensorFlow · DenseNet121 · Grad-CAM · NIH X-ray</div>
-        <a class="proj-link" href="https://github.com/AtanuCodes/Chest_disease_detect" target="_blank" rel="noopener">View source <span class="arr">→</span></a>
+        <div class="proj-top">
+          <span class="yr">2024</span>
+          <span class="st"><i></i>THESIS</span>
+        </div>
+
+        <h3>Fake News Detection</h3>
+
+        <p>
+          An undergraduate thesis comparing <b>SVM, 1D CNN, and LSTM</b>
+          models for classifying news articles as real or fake. Built an
+          end-to-end pipeline for text preprocessing, TF-IDF representation,
+          hyperparameter tuning, and quantitative model evaluation.
+        </p>
+
+        <div class="proj-tech">
+          Python · TensorFlow · scikit-learn · SVM · CNN · LSTM · TF-IDF
+        </div>
+
+        <a
+          class="proj-link"
+          href="https://github.com/AtanuCodes/Fake-News-Detection"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View source <span class="arr">→</span>
+        </a>
       </article>
-     <article class="proj rv d2" data-tilt data-glow>
-  <div class="proj-top">
-    <span class="yr">2026</span>
-    <span class="st"><i></i>SHIPPED</span>
-  </div>
 
-  <h3>AI Research Agent</h3>
+      <!-- Face Mask Detection -->
+      <article class="proj rv d2" data-tilt data-glow>
+        <div class="proj-top">
+          <span class="yr">2024</span>
+          <span class="st"><i></i>SHIPPED</span>
+        </div>
 
-  <p>
-    A <b>LangChain research agent</b> that gathers information through
-    web search and Wikipedia, then returns structured summaries using
-    <b>Pydantic</b>. Powered by Groq's Qwen3-32B, it selects tools as
-    needed, handles lookup and parsing errors, and can save research
-    to timestamped text files.
-  </p>
+        <h3>Real-Time Face Mask Detection</h3>
 
-  <div class="proj-tech">
-    Python · LangChain · Groq · Qwen3-32B · Pydantic · Tool Calling
-  </div>
+        <p>
+          A <b>CNN-based computer vision system</b> that classifies detected
+          faces as with or without a mask. Integrated the trained model with
+          <b>MediaPipe and OpenCV</b> for real-time webcam inference,
+          confidence scores, and visual bounding boxes.
+        </p>
 
-  <a class="proj-link"
-     href="https://github.com/AtanuCodes/research-ai-agent"
-     target="_blank"
-     rel="noopener noreferrer">
-    View source <span class="arr">→</span>
-  </a>
-</article>
+        <div class="proj-tech">
+          Python · TensorFlow · Keras · OpenCV · MediaPipe · CNN
+        </div>
+
+        <a
+          class="proj-link"
+          href="https://github.com/AtanuCodes/FaceMask-Detection"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View source <span class="arr">→</span>
+        </a>
+      </article>
+
+      <!-- Chest Disease Detection -->
+      <article class="proj rv d1" data-tilt data-glow>
+        <div class="proj-top">
+          <span class="yr">2026</span>
+          <span class="st"><i></i>SHIPPED</span>
+        </div>
+
+        <h3>Chest Disease Detection</h3>
+
+        <p>
+          Deep-learning classifier for chest X-rays using
+          <b>DenseNet121 transfer learning</b> on the NIH dataset. Uses data
+          augmentation to address class imbalance and
+          <b>Grad-CAM activation maps</b> to visualize the image regions
+          influencing each prediction.
+        </p>
+
+        <div class="proj-tech">
+          TensorFlow · DenseNet121 · Grad-CAM · NIH X-ray
+        </div>
+
+        <a
+          class="proj-link"
+          href="https://github.com/AtanuCodes/Chest_disease_detect"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View source <span class="arr">→</span>
+        </a>
+      </article>
+
+      <!-- AI Research Agent -->
+      <article class="proj rv d2" data-tilt data-glow>
+        <div class="proj-top">
+          <span class="yr">2026</span>
+          <span class="st"><i></i>SHIPPED</span>
+        </div>
+
+        <h3>AI Research Agent</h3>
+
+        <p>
+          A <b>LangChain research agent</b> that gathers information through
+          web search and Wikipedia, then returns structured summaries using
+          <b>Pydantic</b>. Powered by Groq's Qwen3-32B, it selects tools,
+          handles lookup and parsing errors, and saves research to
+          timestamped text files.
+        </p>
+
+        <div class="proj-tech">
+          Python · LangChain · Groq · Qwen3-32B · Pydantic · Tool Calling
+        </div>
+
+        <a
+          class="proj-link"
+          href="https://github.com/AtanuCodes/research-ai-agent"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View source <span class="arr">→</span>
+        </a>
+      </article>
+
     </div>
   </div>
+  
 </section>
 
 <section class="sec" id="contact">
